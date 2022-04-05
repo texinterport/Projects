@@ -40,4 +40,5 @@ while True:
     elif play_again == "n":
         break
     else:
-        break
+       print("Invalid Input. Please Try Again")
+       play_again = input("Add another location? (y/n) ").lower()
