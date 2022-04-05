@@ -1,0 +1,43 @@
+import random
+
+locations = ["location_one",
+            "location_two",
+           "location_three",
+            "location_four",
+            "location_five",
+            "location_six",
+            "location_seven",
+            "location_eight",
+            "location_nine"]
+
+names = ["name_one", 
+        "name_two",
+        "name_three",
+        "name_four",
+        "name_five",
+        "name_six",
+        "name_seven",
+        "name_eight",
+        "name_nine"]
+
+print("Welcome to Around the World!")
+print("Your options are:")
+for location in locations:
+    print(location)
+    
+while True:   
+    place = input("Enter Location: ").upper()
+    computer = random.sample(names, 1)
+    new_str = " "
+    variable = new_str.join(computer)
+    print(f"You selected {place}, computer selected {variable}.")
+    names.remove(variable)
+
+
+    play_again = input("Add another location? (y/n) ").lower()
+    if play_again == "y":
+        continue
+    elif play_again == "n":
+        break
+    else:
+        break
